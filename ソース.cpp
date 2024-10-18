@@ -30,7 +30,7 @@ T* Index(FixedVector<T, N>& In, size_t P) {
 template<class T,size_t N>
 bool Push(FixedVector<T, N>& In, const T& I) {
 	if (In.Use >= In.Capacity) { return false; }
-	In.D[In.Use] = I;
+	In.D[In.Use++] = I;
 
 	return true;
 }
